@@ -31,6 +31,15 @@ $(function() {
         $('#' + $(this).data('switch')).show();
     });
 
+    $('.top-slider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        arrows: true,
+        dots: true,
+        slidesToScroll: 1,
+        variableWidth: true
+    });
+
 
 });
 
