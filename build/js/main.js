@@ -107,6 +107,7 @@ $(function() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 1,
+        swipe: false,
         variableWidth: true
     });
 
