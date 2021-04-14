@@ -11,9 +11,19 @@
                 <img src="img/top-wrap-bg.jpg" alt="top-wrap">
             </picture>
         </div>
-        <img class="angel-img" src="img/angel.png" alt="angel">
-        <img class="cloud-left" src="img/cloud-left.png" alt="cloud">
-        <img class="cloud-right" src="img/cloud-right.png" alt="cloud"> @@include('components/page/_2_header.html')
+        <div class="angel-img">
+            <picture>
+                <source srcset="img/angel.png" media="(min-width: 1801px)">
+                <img src="img/angel-small.png" alt="angel">
+            </picture>
+        </div>
+        <div class="cloud-right">
+            <picture>
+                <source srcset="img/cloud-right.png" media="(min-width: 1601px)">
+                <img src="img/cloud-right-small.png" alt="angel">
+            </picture>
+        </div>
+        <img class="cloud-left" src="img/cloud-left.png" alt="cloud"> @@include('components/page/_2_header.html')
 
         <main>
             <section class="top-wrap">

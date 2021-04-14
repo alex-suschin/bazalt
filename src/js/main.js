@@ -108,7 +108,13 @@ $(function() {
         slidesToShow: 4,
         slidesToScroll: 1,
         swipe: false,
-        variableWidth: true
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 1201,
+            settings: {
+                centerMode: true
+            }
+        }]
     });
 
 });
@@ -121,12 +127,13 @@ $(window).on('load resize scroll', function() {
 
     }
 
-    if (width > '700') {
-
+    if (width < '992') {
+        $('.menu').insertAfter($('.mobile-menu .logo'));
+        $('.header-top__right').insertAfter($('.mobile-menu .menu'));
     }
 
-    if (width < '700') {
-
+    if (width > '993') {
+        $('.mobile-menu  .menu').appendTo($('.header-bottom .container'));
     }
 
 });
