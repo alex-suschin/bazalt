@@ -32,7 +32,7 @@
         <div class="top-img">
             <picture>
                 <source srcset="img/top-wrap-bg.jpg" media="(min-width: 600px)">
-                <img src="img/top-wrap-bg.jpg" alt="top-wrap">
+                <img src="img/top-wrap-bg-mob.png" alt="top-wrap">
             </picture>
         </div>
         <div class="angel-img">
@@ -78,6 +78,11 @@
                 <span class="whats"><i></i>WhatsApp</span>
                 <span class="viber"><i></i>Viber</span>
             </div>
+            <a id="hamburger-icon" href="javascript: void(0);" title="Menu">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </a>
         </div>
     </div>
     <div class="header-bottom">
@@ -92,7 +97,7 @@
                 <li>
                     <a href="#">Мемориальные комплексы</a>
                 </li>
-                <li>
+                <li class="sub">
                     <a href="#">Благоустроустройство могил</a>
                     <ul class="sub-menu">
                         <li><a href="#">Ограды</a></li>
@@ -101,13 +106,19 @@
                         <li><a href="#">Ритауальные аксессуары</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="sub">
                     <a href="#">Услуги</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">Пункт 1</a></li>
+                        <li><a href="#">Пункт 2</a></li>
+                        <li><a href="#">Пункт 3</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
     <div class="mobile-menu">
+        <a href="#" class="btn-close"></a>
         <a href="#" class="logo" title="Базальт">
             <span>Базальт</span>
             <i>Память на века</i>
@@ -220,6 +231,8 @@
                     <p>Заказывая, изготовление памятников и надгробий в нашей мастерской Вы получаете качественный памятник, который не потеряет свой первоначальный вид в течение длительного времени. Изготовляя памятники, мы учитываем индивидуальные пожелания
                         клиента, предоставляем широкий выбор материалов и услуг. "</p>
                     <a href="#" class="btn-orange">Читать далее</a>
+                    <div class="decor-1-mob"><img src="img/decor1-mob.png" alt=""></div>
+                    <div class="decor-2-mob"><img src="img/decor2-mob.png" alt=""></div>
                 </div>
                 <div class="about__right">
                     <div class="title">Углуги гранитной мастерской</div>
@@ -291,6 +304,8 @@
             </section>
 
             <section class="our-works">
+                <div class="decor-bottom-left"><img src="img/bottom-decor-left.png" alt=""></div>
+                <div class="decor-bottom-right"><img src="img/bottom-decor-right.png" alt=""></div>
                 <div class="container">
                     <h2>Наши работы</h2>
                     <div class="stage">
@@ -433,7 +448,12 @@
         </div>
     </div>
 </footer>
-<img src="img/bottom-img.jpg" class="bottom-img" alt="bottom-img">
+<div class="bottom-img">
+    <picture>
+        <source srcset="img/bottom-img.jpg" media="(min-width: 600px)">
+        <img src="img/bottom-img-mob.png" alt="top-wrap">
+    </picture>
+</div>
     </div>
 
     <script src="js/vendor.min.js"></script>
