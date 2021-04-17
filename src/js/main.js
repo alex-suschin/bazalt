@@ -37,7 +37,13 @@ $(function() {
         arrows: true,
         dots: true,
         slidesToScroll: 1,
-        variableWidth: true
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 601,
+            settings: {
+                arrows: false
+            }
+        }]
     });
 
     let xPos = 0;
@@ -68,8 +74,8 @@ $(function() {
             })
         }, '-=0.5')
 
-    $(window).on('mousedown touchstart', dragStart);
-    $(window).on('mouseup touchend', dragEnd);
+    $('.stage').on('mousedown touchstart', dragStart);
+    $('.stage').on('mouseup touchend', dragEnd);
 
 
     function dragStart(e) {
