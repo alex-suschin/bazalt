@@ -497,6 +497,7 @@ select {
     }
     span {
         position: relative;
+        z-index: 5;
         display: block;
         font-weight: 500;
         font-size: 16px;
@@ -523,6 +524,42 @@ select {
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
     }
+}
+
+.social .whats i {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-image: url(../img/tel-ico-white.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: cover;
+    background-size: 57%;
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-image: url(../img/whats-bg.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        bottom: 0;
+        z-index: -1;
+    }
+}
+
+.social .viber i {
+    width: 16px;
+    height: 16px;
+    background-image: url(../img/viber-ico.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 57%;
 }
 
 .header-bottom {
@@ -1031,6 +1068,7 @@ select {
 .stage {}
 
 .img {
+    display: block;
     background-position: center!important;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1111,6 +1149,7 @@ select {
 }
 
 .rew-img {
+    display: block;
     position: relative;
     height: 0;
     padding-bottom: 53.125%;
@@ -1255,6 +1294,8 @@ footer {
         font-size: 14px;
         line-height: 17px;
         color: #FFFFFF;
+        padding: 0 0 0 23px;
+        background: url(../img/mail-ico.svg) no-repeat left center;
     }
     .time {
         font-weight: 500;
@@ -1270,6 +1311,7 @@ footer {
         font-size: 14px;
         line-height: 17px;
         color: #FFFFFF;
+        padding-left: 23px;
     }
     .tel {
         display: block;
@@ -1316,17 +1358,92 @@ footer {
 }
 
 .intrid {
-    font-weight: 500;
+    display: block;
+    font-weight: normal;
     font-size: 14px;
     line-height: 30px;
-    text-decoration-line: underline;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    padding: 5px;
-    background: #E8B171;
+    color: #3A3A3A;
+    width: 140px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0 0 4px 15px;
+    background: url(../img/intrid.png) no-repeat center;
+}
+
+.popup-wrap {
+    background-color: rgba(0, 0, 0, 0.85);
+    display: block;
+    opacity: 0;
+    -webkit-transition: opacity .5s, top .5s;
+    -o-transition: opacity .5s, top .5s;
+    transition: opacity .5s, top .5s;
+    overflow: auto;
+    position: fixed;
+    z-index: 999999;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    visibility: hidden;
+}
+
+.popup {
+    display: block;
+    position: relative;
+    max-width: 850px;
+    margin: 100px auto 100px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .5s, top .5s;
+    -o-transition: all .5s, top .5s;
+    transition: all .5s, top .5s;
+    z-index: 999;
+    transform: translateY(-500px);
+    -webkit-transform: translateY(-500px);
+    -moz-transform: translateY(-500px);
+    -ms-transform: translateY(-500px);
+    -o-transform: translateY(-500px);
+}
+
+.popup-active {
+    visibility: visible;
+    opacity: 1;
+    outline: none;
+}
+
+.popup-active .popup {
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
+
+.close-map {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(../img/close-popup.svg) no-repeat center;
+    position: absolute;
+    top: -45px;
+    right: 0;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
 }
 
 @media screen and (min-width:992px) {
+    .close-map:hover {
+        opacity: 0.5;
+    }
+    .address:hover {
+        color: #E89F71;
+    }
     .rewiews-slider .slick-next:hover:before {
         right: -12px;
     }
@@ -1349,7 +1466,7 @@ footer {
         color: #E8B171;
     }
     .intrid:hover {
-        background: #E89F71;
+        text-decoration: underline;
     }
     .footer-info ul a:hover {
         color: #E8B171;

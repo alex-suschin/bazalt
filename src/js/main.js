@@ -136,6 +136,26 @@ $(function() {
     });
 
 
+    $('.js-address').click(function(e) {
+        e.preventDefault();
+        $('#popup-wrap-map').addClass('popup-active');
+        $('#popup-map').addClass('popup-active');
+    });
+
+    $('.close-map').click(function(e) {
+        e.preventDefault();
+        $('#popup-wrap-map').removeClass('popup-active');
+        $('#popup-map').removeClass('popup-active');
+    });
+
+    $(document).click(function(event) {
+        if (!$(event.target).closest("#popup-map,.js-address").length) {
+            $("body").find("#popup-wrap-map").removeClass("popup-active");
+            $("body").find("#popup-map").removeClass("popup-active");
+        }
+    });
+
+
 
 });
 
