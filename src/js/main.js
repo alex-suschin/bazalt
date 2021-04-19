@@ -161,6 +161,44 @@ $(function() {
         }
     });
 
+    $('.filter-name').click(function() {
+        $(this).parents('.filter-box-item').toggleClass('active');
+        $(this).siblings('.filter-inputs').slideToggle();
+    });
+
+
+    $(".js-range-slider").ionRangeSlider({
+        type: "double",
+        min: 0,
+        max: 5000,
+        from: 250,
+        to: 1800,
+        grid: false,
+        onChange: function(data) {
+            $('.start-price').val(data.from);
+            $('.finish-price').val(data.to_pretty);
+        }
+    });
+
+    $('.range-slider-input').keyup(function() {
+        let inputId = $(this).attr('id');
+        let inputValue = $(this).val();
+        let my_range = $(".js-range-slider").data("ionRangeSlider");
+        if (inputId === 'slider-input-from') {
+            my_range.update({
+                from: inputValue
+            });
+        } else {
+            my_range.update({
+                to: inputValue
+            });
+        }
+    });
+
+    $('.btn-filter').click(function() {
+        $(this).siblings('.filter').slideToggle();
+    });
+
 
 
 });
