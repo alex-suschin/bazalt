@@ -1,9 +1,20 @@
 $(function() {
 
-    jQuery("a.scrollto").click(function() {
-        elementClick = jQuery(this).attr("href")
-        destination = jQuery(elementClick).offset().top;
-        jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
+    $(document).scroll(function() {
+        let scroll = $(window).scrollTop();
+        if (scroll >= 300) {
+            $('.anchor-up').addClass('active');
+        } else {
+            $('.anchor-up').removeClass('active');
+        }
+
+    });
+
+
+    $("a.anchor-up").click(function() {
+        elementClick = $(this).attr("href")
+        destination = $(elementClick).offset().top;
+        $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 700);
         return false;
     });
 
@@ -39,7 +50,7 @@ $(function() {
         slidesToScroll: 1,
         variableWidth: true,
         responsive: [{
-            breakpoint: 601,
+            breakpoint: 661,
             settings: {
                 arrows: false
             }
@@ -198,6 +209,7 @@ $(function() {
     $('.btn-filter').click(function() {
         $(this).siblings('.filter').slideToggle();
     });
+
 
 
 
