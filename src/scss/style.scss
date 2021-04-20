@@ -627,7 +627,7 @@ select {
     max-height: 0;
     background: #000;
     max-width: 100%;
-    min-width: 220px;
+    min-width: 245px;
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.06);
@@ -871,6 +871,7 @@ select {
     line-height: 120%;
     color: #3A3A3A;
     margin-bottom: 10px;
+    @include transition;
 }
 
 .category-item-col {
@@ -990,7 +991,7 @@ select {
     span {
         font-weight: 500;
         font-size: 20px;
-        line-height: 30px;
+        line-height: 25px;
         color: #18191F;
         @include transition;
     }
@@ -1314,6 +1315,7 @@ footer {
         margin-bottom: 17px;
     }
     .address {
+        display: block;
         color: #fff;
         margin-bottom: 20px;
     }
@@ -1466,6 +1468,9 @@ footer {
 }
 
 @media screen and (min-width:992px) {
+    .social span:hover {
+        text-decoration: underline;
+    }
     .catalog-item:hover {
         border-color: transparent;
         filter: drop-shadow(0px 10px 20px rgba(232, 159, 113, 0.2));
@@ -1494,6 +1499,9 @@ footer {
     .footer-info .tel:hover {
         text-decoration: underline;
     }
+    .footer-info .mail:hover {
+        text-decoration: underline;
+    }
     .services-item:hover span {
         color: #E8B171;
     }
@@ -1510,6 +1518,9 @@ footer {
     .category-item:hover .category-item-content {
         box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.18);
     }
+    .category-item:hover .category-item-title {
+        color: #E89F71;
+    }
     .top-slider .slick-dots li:hover button {
         background: #E89F71;
     }
@@ -1522,6 +1533,13 @@ footer {
     .menu li:hover>a {
         background: #E89F71;
         color: #fff;
+    }
+    .menu li:hover::after {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
     }
     .modal-close:hover {
         opacity: 0.7;
@@ -3396,6 +3414,21 @@ Ion.RangeSlider
     }
 }
 
+.sub {
+    position: relative;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 23px;
+        right: 2.5px;
+        @include transition;
+        width: 9px;
+        height: 4px;
+        background: url(../img/arrow-down.svg) no-repeat right;
+    }
+}
+
 
 /* 
     M O B I L E
@@ -3857,6 +3890,12 @@ Ion.RangeSlider
 }
 
 @media screen and (max-width: 991px) {
+    .sub {
+        &::after {
+            top: 18px;
+            right: 26px;
+        }
+    }
     .btn-orange:active {
         background: #E89F71;
     }
@@ -4076,20 +4115,6 @@ Ion.RangeSlider
     .worktime {
         margin: 0 auto;
         margin-bottom: 21px;
-    }
-    .sub {
-        position: relative;
-        &::after {
-            content: '';
-            display: block;
-            position: absolute;
-            top: 18px;
-            right: 26px;
-            @include transition;
-            width: 9px;
-            height: 4px;
-            background: url(../img/arrow-down.svg) no-repeat right;
-        }
     }
     .phones {
         margin: 0 auto;

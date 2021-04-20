@@ -68,7 +68,7 @@ $(function() {
         slidesToScroll: 1,
         variableWidth: true,
         responsive: [{
-            breakpoint: 661,
+            breakpoint: 769,
             settings: {
                 arrows: false
             }
