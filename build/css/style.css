@@ -3743,28 +3743,24 @@ Ion.RangeSlider
     padding: 0 15px; }
   .header-top {
     display: none; }
-  .header-info .container > .phones {
-    margin: 0 23px 0 0; }
-  .header-info .container > .phones a:first-child {
-    display: block;
-    width: 18px;
-    padding: 0;
-    height: 18px;
-    font-size: 0;
-    text-indent: -9999;
-    margin-bottom: 0; }
-  .header-info .container > .phones a:last-child {
-    display: none; }
   .top-img {
     top: 65px; }
   .slogan {
     display: none; }
-  header .social span:first-child,
-  header .social span:last-child {
-    font-size: 0;
-    margin-bottom: 0; }
   .social i {
     margin-right: 23px; }
+  .top-img {
+    top: 0px; }
+  body {
+    padding-top: 92px; }
+  header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #F3FBFC;
+    width: 100%;
+    z-index: 999; }
   header .header-info .logo span {
     display: block;
     font-weight: 500;
@@ -3780,21 +3776,6 @@ Ion.RangeSlider
   .header-info .logo {
     position: absolute;
     left: 15px; }
-  .social {
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
   .header-info .container {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -3868,6 +3849,9 @@ Ion.RangeSlider
     line-height: 19px;
     color: #121110;
     padding: 10px 10px 9px 33px; }
+  .social {
+    margin-right: 20px;
+    margin-top: 0; }
   .sub-menu {
     position: static;
     max-height: initial;
@@ -4203,6 +4187,41 @@ Ion.RangeSlider
             justify-content: flex-start; } }
 
 @media screen and (max-width: 600px) {
+  body {
+    padding-top: 65px; }
+  .social i {
+    margin-right: 23px; }
+  .social {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  header .social span:first-child,
+  header .social span:last-child {
+    font-size: 0;
+    margin-bottom: 0; }
+  .header-info .container > .phones {
+    margin: 0 23px 0 0; }
+  .header-info .container > .phones a:first-child {
+    display: block;
+    width: 18px;
+    padding: 0;
+    height: 18px;
+    font-size: 0;
+    text-indent: -9999;
+    margin-bottom: 0; }
+  .header-info .container > .phones a:last-child {
+    display: none; }
   .top-slider .slick-prev,
   .top-slider .slick-next {
     display: none; }
@@ -4356,7 +4375,7 @@ Ion.RangeSlider
   .category-item-img {
     width: 38%; }
   .category-item:nth-child(3) .category-item-img {
-    width: 48%; }
+    width: 34%; }
   .category-item .category-item-content {
     padding: 35px 20px 40px 70px; }
   .category-item-title {
@@ -4422,6 +4441,8 @@ Ion.RangeSlider
     height: 300px; } }
 
 @media screen and (max-width: 550px) {
+  .category-item:nth-child(3) .category-item-img {
+    width: 48%; }
   .category-item:last-child .category-item-content {
     padding: 35px 20px 40px 70px; }
   .catalog-items {
@@ -4565,7 +4586,7 @@ Ion.RangeSlider
   .cloud-right {
     top: 165px; }
   .main-price {
-    padding: 80px 0 0 0; } }
+    padding: 36% 0 0 0; } }
 
 @media screen and (max-width: 370px) {
   .content h1 {
