@@ -10,6 +10,24 @@ $(function() {
 
     });
 
+    $(window).on('load', function() {
+        let phones = [
+            { 'mask': '+7 \\ \\ ###-###-##-##' }
+        ];
+
+        $('input[type=tel]').inputmask({
+            mask: phones,
+            greedy: false,
+            definitions: {
+                '#': {
+                    validator: '[0-9]',
+                    cardinality: 1
+                }
+            }
+        });
+    });
+
+    $('select').niceSelect();
 
     $("a.anchor-up").click(function() {
         elementClick = $(this).attr("href")

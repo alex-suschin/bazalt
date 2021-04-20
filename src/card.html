@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Базальт', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper vn vn-card" id="main">
+        @@include('components/page/_2_header.html')
+
+        <main>
+
+            <section class="content">
+                <div class="breadcrumbs-wrap">
+                    <div class="container">
+                        <ul class="breadcrumbs">
+                            <li><a href="#">Памятники</a></li>
+                            <li><a href="#">Гранитные памятники</a></li>
+                            <li>Горизонтальный памятник Г - 001</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card-wrap">
+                        <div class="card-wrap__left">
+                            <a href="img/card-img.jpg" data-fancybox="card-imgs" class="card-img"><img src="img/card-img.jpg" alt=""></a>
+                        </div>
+                        <div class="card-wrap__right">
+                            <h1>Горизонтальный памятник Г - 001</h1>
+                            <div class="card-info">
+                                <div class="card-info-top">
+                                    <div class="card-properties">
+                                        <div class="card-properties-item">
+                                            <span>Материал:</span>
+                                            <b>Гранит</b>
+                                        </div>
+                                        <div class="card-properties-item">
+                                            <span>Цвет:</span>
+                                            <b>Черный</b>
+                                        </div>
+                                        <div class="card-properties-item">
+                                            <span>Срок изготовления:</span>
+                                            <b>2 - 3 недели</b>
+                                        </div>
+                                        <div class="card-properties-item">
+                                            <span>Гарантия:</span>
+                                            <b>3 года</b>
+                                        </div>
+                                    </div>
+                                    <div class="card-consist">
+                                        <span>В комплект выходит:</span>
+                                        <b>Плита</b>
+                                        <b>Плитка на цветник</b>
+                                        <b>Художественная гравировка </b>
+                                        <b>Эпитафия</b>
+                                    </div>
+                                </div>
+                                <form action="/" class="card-form" method="POST">
+                                    <div class="card-size">
+                                        <span>Выберите размер</span>
+                                        <select name="size" id="size">
+                                        <option value="40х80х8х5">40х80х8х5</option>
+                                        <option value="80х120х8х5">80х120х8х5</option>
+                                        <option value="40х180х8х5">120х180х8х5</option>
+                                    </select>
+                                    </div>
+                                    <div class="card-price">
+                                        <b><i>12 450</i> ₽</b>
+                                        <button class="btn-orange" type="submit">
+                                            <span>Заказать</span>
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="card-adds">
+                                    <b>Дополнительно можно заказать:</b>
+                                    <div class="card-adds-items">
+                                        <div class="card-adds-item">
+                                            <span>Цветок:</span>
+                                            <b>500 ₽</b>
+                                        </div>
+                                        <div class="card-adds-item">
+                                            <span>Покрытие от намокания:</span>
+                                            <b>1400 ₽</b>
+                                        </div>
+                                        <div class="card-adds-item">
+                                            <span>Крест:</span>
+                                            <b>1000 ₽</b>
+                                        </div>
+                                        <div class="card-adds-item">
+                                            <span>Хранение на складе:</span>
+                                            <b>Бесплатно</b>
+                                        </div>
+                                        <div class="card-adds-item">
+                                            <span>Ваза:</span>
+                                            <b>800 ₽</b>
+                                        </div>
+                                        <div class="card-adds-item">
+                                            <span>Установка:</span>
+                                            <b>5500 ₽</b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-exs">
+                                    <div class="card-exs-item">
+                                        <i><img src="img/ex-ico5.svg" alt=""></i>
+                                        <span>Рассрочка 6 месяцев 
+                                            при заказе через сайт</span>
+                                    </div>
+
+                                    <div class="card-exs-item">
+                                        <i><img src="img/ex-ico4.svg" alt=""></i>
+                                        <span>Доставка по Воронежу
+                                            и области - от 1000 ₽</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="about-text">
+                <div class="container">
+                    <p>"Гранитная мастерская «Базальт» оказывает услуги в Воронеже и Воронежской области по изготовлению надгробных памятников и их установке. Изготовление надгробий из мрамора и гранита это трудоемкий процесс, требует большого опыта, огромного
+                        профессионализма, знания и понимания важности своего дела. Заказывая, изготовление памятников и надгробий в нашей мастерской Вы получаете качественный памятник, который не потеряет свой первоначальный вид в течение длительного
+                        времени. понимания важности своего дела. Заказывая, изготовление памятников и надгробий в нашей мастерской Вы получаете качественный памятник, который не потеряет свой первоначальный вид в течение длительного времени.
+                    </p>
+                </div>
+            </section>
+
+            <section class="form-wrap">
+                <div class="container">
+                    <div class="title">Закажите бесплатную консультацию</div>
+                    <form action="/" class="form-callback" method="POST">
+                        <div class="form-callback-item">
+                            <label for="input-name">Ваше имя</label>
+                            <input id="input-name" type="text" placeholder="Имя">
+                        </div>
+                        <div class="form-callback-item">
+                            <label for="input-name">Ваш телефон</label>
+                            <input id="input-name" type="tel" placeholder="Телефон">
+                        </div>
+                        <div class="form-callback-item">
+                            <label for="input-name">Ваш E-mail</label>
+                            <input id="input-name" type="e-mail" placeholder="E-mail">
+                        </div>
+                        <button class="btn-orange" type="submit">Заказать</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="our-works">
+                <div class="container">
+                    <h2>Наши работы</h2>
+                    <div class="stage">
+                        <div class="works-photos">
+                            <div class="ring">
+                                <a href="img/rew-1.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-1.jpg);"></a>
+                                <a href="img/rew-2.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-2.jpg);"></a>
+                                <a href="img/rew-3.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-3.jpg);"></a>
+                                <a href="img/rew-4.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-4.jpg);"></a>
+                                <a href="img/rew-1.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-1.jpg);"></a>
+                                <a href="img/rew-2.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-2.jpg);"></a>
+                                <a href="img/rew-3.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-3.jpg);"></a>
+                                <a href="img/rew-4.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-4.jpg);"></a>
+                                <a href="img/rew-1.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-1.jpg);"></a>
+                                <div href="img/rew-2.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-2.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-orange btn-more">Смотреть все</a>
+                </div>
+            </section>
+
+        </main>
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
