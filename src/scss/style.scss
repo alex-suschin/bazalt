@@ -1501,6 +1501,7 @@ footer {
         text-decoration: underline;
     }
     .footer-info ul a:hover {
+        text-decoration: none;
         color: #E8B171;
     }
     .btn-orange:hover {
@@ -1527,6 +1528,7 @@ footer {
     }
     .header-top__right a:hover {
         color: #E89F71;
+        text-decoration: none;
     }
     .card-price button.btn-orange:hover {
         background: #F7C790;
@@ -2774,13 +2776,28 @@ Ion.RangeSlider
     align-items: center;
     flex-wrap: wrap;
     li {
-        margin-right: 20px;
+        position: relative;
+        margin-right: 23px;
         font-weight: normal;
         font-size: 14px;
         line-height: 17px;
         color: #505A5C;
+        &::after {
+            content: '/';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: -17px;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 17px;
+            color: #898989;
+        }
         &:last-child {
             margin-right: 0;
+        }
+        &:last-child::after {
+            content: none;
         }
     }
     a {
@@ -3256,7 +3273,10 @@ Ion.RangeSlider
     position: relative;
     padding: 86px 0 68px 0;
     background: #E7F7F9;
-    margin-bottom: 47px;
+    margin-bottom: 0;
+    .container {
+        z-index: 25;
+    }
     .title {
         font-weight: 500;
         font-size: 24px;
@@ -3264,6 +3284,50 @@ Ion.RangeSlider
         color: #22262A;
         margin-bottom: 28px;
     }
+}
+
+.decor-form-left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 314px;
+    height: 603px;
+    max-height: inherit;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.decor-form-right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 431px;
+    height: 645px;
+    max-height: inherit;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    z-index: 5;
+}
+
+.decor-form-angel {
+    position: absolute;
+    top: 51%;
+    right: 136px;
+    width: 575px;
+    height: 504px;
+    max-height: inherit;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    z-index: 3;
 }
 
 .form-callback {
@@ -3315,6 +3379,21 @@ Ion.RangeSlider
 
 .vn .stage+.btn-more {
     margin-bottom: 167px;
+}
+
+.vn .our-works {
+    position: relative;
+    padding: 47px 0 0 0;
+    z-index: 15;
+    &::before {
+        content: '';
+        height: 80px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background: #fff;
+    }
 }
 
 
@@ -3414,6 +3493,12 @@ Ion.RangeSlider
     .filter-name span {
         font-size: 14px;
     }
+    .form-callback {
+        width: 85%;
+    }
+    .decor-form-angel {
+        right: 25px;
+    }
 }
 
 @media screen and (max-width: 1530px) {
@@ -3448,6 +3533,9 @@ Ion.RangeSlider
 @media screen and (max-width: 1395px) {
     .catalog-item {
         width: 15%;
+    }
+    .decor-form-angel {
+        right: 0;
     }
 }
 
@@ -3505,6 +3593,11 @@ Ion.RangeSlider
     .about__right {
         width: 100%;
         min-height: initial;
+    }
+    .decor-form-left,
+    .decor-form-right,
+    .decor-form-angel {
+        display: none;
     }
 }
 
@@ -3750,6 +3843,16 @@ Ion.RangeSlider
     }
     .catalog-item:nth-child(4n) {
         margin-right: 0;
+    }
+    .form-callback {
+        width: 95%;
+    }
+    .card-properties {
+        width: 51.5%;
+        margin-right: 55px;
+    }
+    .card-adds-items {
+        width: 100%;
     }
 }
 
@@ -4055,6 +4158,15 @@ Ion.RangeSlider
     .menu {
         margin-left: 0;
     }
+    .form-callback {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .form-callback-item {
+        max-width: 100%;
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -4095,6 +4207,27 @@ Ion.RangeSlider
     }
     .catalog-item:nth-child(3n) {
         margin-right: 0;
+    }
+    .card-wrap {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-wrap__left {
+        margin-bottom: 30px;
+    }
+    .card-wrap__right {
+        width: 100%;
+    }
+    .card-wrap__left h1 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+        color: #22262A;
+    }
+    .card-wrap__left {
+        max-width: 495px;
+        width: 100%;
     }
 }
 
@@ -4484,6 +4617,12 @@ Ion.RangeSlider
         padding: 10px 0 0 0;
         margin-top: 20px;
     }
+    .vn .stage+.btn-more {
+        margin-bottom: 80px;
+    }
+    .vn .stage {
+        height: 300px;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -4571,6 +4710,71 @@ Ion.RangeSlider
     .filter-name span {
         font-size: 16px;
     }
+    .card-info-top {
+        flex-direction: column;
+    }
+    .card-properties {
+        width: 100%;
+        margin-right: 0;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #DFE1E2;
+        margin-bottom: 20px;
+    }
+    .card-adds-items {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-adds-item {
+        width: 100%;
+    }
+    .card-adds-item:nth-child(2n) {
+        width: 100%;
+    }
+    .card-exs {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card-exs-item {
+        margin-bottom: 30px;
+        margin-right: 0;
+    }
+    .card-exs-item:last-child {
+        margin-bottom: 0;
+    }
+    .card-exs-item:first-child {
+        margin-right: 0;
+    }
+    .card-wrap {
+        padding-bottom: 30px;
+    }
+    .card-adds>b {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .card-size {
+        margin-bottom: 20px;
+    }
+    .form-callback-item input {
+        height: 40px;
+        box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -ms-border-radius: 6px;
+        -o-border-radius: 6px;
+    }
+    .form-wrap .title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .form-wrap {
+        padding: 18px 0 31px 0;
+    }
+    .form-callback-item {
+        margin-bottom: 16px;
+    }
 }
 
 @media screen and (max-width: 450px) {
@@ -4590,6 +4794,9 @@ Ion.RangeSlider
 }
 
 @media screen and (max-width: 370px) {
+    .content h1 {
+        font-size: 17px;
+    }
     .catalog-item-title {
         font-size: 14px;
     }

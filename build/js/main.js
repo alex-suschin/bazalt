@@ -267,5 +267,13 @@ $(window).on('load resize', function() {
         $('.mobile-menu  .menu').appendTo($('.header-bottom .container'));
     }
 
+    if (width > '950') {
+        $('.card-wrap__left h1').prependTo($('.card-wrap__right'))
+    }
+
+    if (width < '951') {
+        $('.card-wrap__right h1').prependTo($('.card-wrap__left'))
+    }
+
 });
 //# sourceMappingURL=../sourcemaps/main.js.map
