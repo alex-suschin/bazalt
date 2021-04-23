@@ -24,9 +24,9 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Heavy.eot");
-  src: url("../fonts/Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
-  font-weight: 700;
+  src: url("../fonts/Gilroy-Medium.eot");
+  src: url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+  font-weight: 500;
   font-style: normal;
   font-display: swap; }
 
@@ -40,6 +40,14 @@
 
 @font-face {
   font-family: "Gilroy";
+  src: url("../fonts/Gilroy-SemiBold.eot");
+  src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: "Gilroy";
   src: url("../fonts/Gilroy-Light.eot");
   src: url("../fonts/Gilroy-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Light.woff2") format("woff2"), url("../fonts/Gilroy-Light.woff") format("woff");
   font-weight: 300;
@@ -48,17 +56,9 @@
 
 @font-face {
   font-family: "Gilroy";
-  src: url("../fonts/Gilroy-Medium.eot");
-  src: url("../fonts/Gilroy-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap; }
-
-@font-face {
-  font-family: "Gilroy";
-  src: url("../fonts/Gilroy-SemiBold.eot");
-  src: url("../fonts/Gilroy-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-SemiBold.woff2") format("woff2"), url("../fonts/Gilroy-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Gilroy-Heavy.eot");
+  src: url("../fonts/Gilroy-Heavy.eot?#iefix") format("embedded-opentype"), url("../fonts/Gilroy-Heavy.woff2") format("woff2"), url("../fonts/Gilroy-Heavy.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap; }
 
@@ -1516,6 +1516,8 @@ footer .logo i {
     border-color: transparent;
     -webkit-filter: drop-shadow(0px 10px 20px rgba(232, 159, 113, 0.2));
             filter: drop-shadow(0px 10px 20px rgba(232, 159, 113, 0.2)); }
+  .catalog-item:hover .catalog-item-title {
+    color: #E89F71; }
   .close-map:hover {
     opacity: 0.5; }
   .address:hover {
@@ -2574,12 +2576,17 @@ Ion.RangeSlider
   display: block; }
 
 .catalog-item-title {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.5px;
   color: #3A3A3A;
-  margin-bottom: 11px; }
+  margin-bottom: 11px;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear; }
 
 .catalog-item-param {
   display: -webkit-box;
@@ -2658,7 +2665,7 @@ Ion.RangeSlider
   right: 50px;
   width: 50px;
   height: 50px;
-  z-index: 9999;
+  z-index: 99;
   background-color: #fff;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -3066,7 +3073,8 @@ Ion.RangeSlider
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 41px; }
+  margin-bottom: 41px;
+  width: 50%; }
   .card-price b {
     font-weight: 800;
     display: block;
@@ -3268,7 +3276,9 @@ Ion.RangeSlider
       flex-wrap: wrap; }
   .form-callback button.btn-orange {
     max-width: 143px;
-    margin-top: 7px; }
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: 86px; }
 
 .form-callback-item {
   max-width: 253px;
@@ -3334,6 +3344,21 @@ Ion.RangeSlider
     width: 9px;
     height: 4px;
     background: url(../img/arrow-down.svg) no-repeat right; }
+
+@-moz-document url-prefix() {
+  .footer-box {
+    background: rgba(0, 0, 0, 0.5); } }
+
+.card-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
 
 /* 
     M O B I L E
@@ -3406,7 +3431,9 @@ Ion.RangeSlider
   .form-callback {
     width: 85%; }
   .decor-form-angel {
-    right: 25px; } }
+    right: 25px; }
+  .form-callback button.btn-orange {
+    margin-right: 154px; } }
 
 @media screen and (max-width: 1530px) {
   .catalog-item {
@@ -3488,7 +3515,10 @@ Ion.RangeSlider
   .decor-form-left,
   .decor-form-right,
   .decor-form-angel {
-    display: none; } }
+    display: none; }
+  .anchor-up {
+    right: 10px;
+    bottom: 10px; } }
 
 @media screen and (max-width: 1250px) {
   .top-slider {
@@ -3529,9 +3559,95 @@ Ion.RangeSlider
     max-width: initial;
     width: 48%;
     margin-bottom: 25px; }
+  .footer-box {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
   .footer-box .logo {
-    margin-right: 0;
+    margin-right: 25px;
     margin-bottom: 25px; }
+  .footer-info {
+    width: 79%; }
+    .footer-info > div:first-child {
+      width: 41%; }
+  footer .address {
+    margin-right: 0; }
+  .rewiews-slider {
+    margin: 0 -15px;
+    margin-bottom: 35px; }
+  .works-photos {
+    -webkit-perspective: 600px;
+            perspective: 600px; }
+  .decor-bottom-left,
+  .decor-bottom-right {
+    display: none; }
+  .category-item:last-child .category-item-content {
+    padding: 35px 20px 40px 130px; }
+  .form-callback button.btn-orange {
+    margin-right: 0;
+    margin-left: 0; } }
+
+@media screen and (max-width: 1170px) {
+  .filter-inputs label span:after {
+    top: 0; }
+  .filter-box-item {
+    max-width: 165px;
+    width: 100%;
+    padding: 10px 5px 10px 10px; }
+  .filter-price {
+    max-width: 180px;
+    width: 100%; }
+  .filter-inputs {
+    padding: 36px 0 0 10px; }
+  .filter-name span,
+  .filter-inputs label span {
+    font-size: 12px; }
+  .form-filter button {
+    font-size: 12px;
+    width: 80px; }
+  .menu li:last-child .sub-menu {
+    right: 0; } }
+
+@media screen and (max-width: 1100px) {
+  .footer-info {
+    width: 79%; }
+    .footer-info > div:first-child {
+      width: 37%; }
+  .footer-box .logo span {
+    font-size: 48px; }
+  .header-top__left span {
+    margin-right: 25px; }
+  .header-top .address {
+    margin-right: 25px; }
+  .header-top__right a {
+    font-size: 14px; }
+  .slogan {
+    margin-left: 60px;
+    margin-right: 20px; }
+  .header-info .phones {
+    margin-right: 20px; }
+  .menu a {
+    padding: 14px 10px 15px 10px; }
+  .catalog-item {
+    max-width: initial;
+    width: 23.3%; }
+  .catalog-item:nth-child(5n) {
+    margin-right: 20px; }
+  .catalog-item:nth-child(4n) {
+    margin-right: 0; }
+  .form-callback {
+    width: 95%; }
+  .card-properties {
+    width: 51.5%;
+    margin-right: 55px; }
+  .card-adds-items {
+    width: 100%; }
+  .sub-menu {
+    min-width: 220px; }
+  .sub::after {
+    right: 0; } }
+
+@media screen and (max-width: 1020px) {
   .footer-box {
     position: relative;
     -webkit-box-orient: vertical;
@@ -3539,19 +3655,8 @@ Ion.RangeSlider
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0 -15px;
-    padding: 5px 15px 30px 15px; }
-    .footer-box::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.15);
-      z-index: -1; }
+    padding: 5px 15px 30px 15px;
+    background: rgba(0, 0, 0, 0.25); }
   .footer-info {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -3608,19 +3713,10 @@ Ion.RangeSlider
     .footer-info .social .whats {
       margin-right: 0;
       margin-bottom: 12px; }
-  .rewiews-slider {
-    margin: 0 -15px;
-    margin-bottom: 35px; }
-  .works-photos {
-    -webkit-perspective: 600px;
-            perspective: 600px; }
-  .decor-bottom-left,
-  .decor-bottom-right {
-    display: none; }
-  .category-item:last-child .category-item-content {
-    padding: 35px 20px 40px 130px; } }
-
-@media screen and (max-width: 1170px) {
+  .footer-box::after {
+    content: none; }
+  .footer-info > div:first-child {
+    width: 100%; }
   .filter-box-item {
     padding: 10px 5px 10px 0; }
   .btn-filter {
@@ -3696,36 +3792,11 @@ Ion.RangeSlider
     margin: 20px 0; }
   .form-filter button {
     -ms-flex-item-align: end;
-        align-self: flex-end; } }
-
-@media screen and (max-width: 1100px) {
-  .header-top__left span {
-    margin-right: 25px; }
-  .header-top .address {
-    margin-right: 25px; }
-  .header-top__right a {
-    font-size: 14px; }
-  .slogan {
-    margin-left: 60px;
-    margin-right: 20px; }
-  .header-info .phones {
-    margin-right: 20px; }
-  .menu a {
-    padding: 14px 10px 15px 10px; }
-  .catalog-item {
-    max-width: initial;
-    width: 23.3%; }
-  .catalog-item:nth-child(5n) {
-    margin-right: 20px; }
-  .catalog-item:nth-child(4n) {
-    margin-right: 0; }
-  .form-callback {
-    width: 95%; }
-  .card-properties {
-    width: 51.5%;
-    margin-right: 55px; }
-  .card-adds-items {
-    width: 100%; } }
+        align-self: flex-end; }
+  .card-size {
+    width: 45%; }
+  .card-price {
+    width: 55%; } }
 
 @media screen and (max-width: 991px) {
   .sub::after {
@@ -3967,12 +4038,6 @@ Ion.RangeSlider
   .top-slider .slick-dots li button:before {
     width: 16.88px;
     height: 16.88px; }
-  .top-slider .slick-dots li button:before {
-    transform: translate(-47%, -50%);
-    -webkit-transform: translate(-47%, -50%);
-    -moz-transform: translate(-47%, -50%);
-    -ms-transform: translate(-47%, -50%);
-    -o-transform: translate(-47%, -50%); }
   .main-price {
     padding: 112px 0 0 0; }
   .cloud-right {
@@ -4438,7 +4503,18 @@ Ion.RangeSlider
   .vn .stage + .btn-more {
     margin-bottom: 80px; }
   .vn .stage {
-    height: 300px; } }
+    height: 300px; }
+  .card-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
+  .card-size,
+  .card-price {
+    width: 100%; } }
 
 @media screen and (max-width: 550px) {
   .category-item:nth-child(3) .category-item-img {
@@ -4586,7 +4662,13 @@ Ion.RangeSlider
   .cloud-right {
     top: 165px; }
   .main-price {
-    padding: 36% 0 0 0; } }
+    padding: 36% 0 0 0; }
+  .top-slider .slick-dots li button:before {
+    transform: translate(-47%, -50%);
+    -webkit-transform: translate(-47%, -50%);
+    -moz-transform: translate(-47%, -50%);
+    -ms-transform: translate(-47%, -50%);
+    -o-transform: translate(-47%, -50%); } }
 
 @media screen and (max-width: 370px) {
   .content h1 {
@@ -4611,6 +4693,8 @@ Ion.RangeSlider
   .services-item span {
     font-size: 11px; }
   .exs-item-title {
-    font-size: 12px; } }
+    font-size: 12px; }
+  .services-item span {
+    line-height: 1.3; } }
 
 /*# sourceMappingURL=../sourcemaps/style.css.map */
