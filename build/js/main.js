@@ -229,6 +229,23 @@ $(function() {
     });
 
 
+    $('.filter-box-item input[type="checkbox"]').change(function() {
+        var colCheked = $(this).parents('label').parents('.filter-inputs').find('input[type=checkbox]:checked').length;
+        console.log(colCheked);
+        if (colCheked > 0) {
+            $(this).parents('label').parents('.filter-inputs').siblings('.filter-name').find('i').show();
+            $(this).parents('label').parents('.filter-inputs').siblings('.filter-name').find('i').find('small').text(colCheked);
+        } else {
+            $(this).parents('label').parents('.filter-inputs').siblings('.filter-name').find('i').hide();
+        }
+    });
+
+    $('#size').change(function() {
+        var getPrice = $('#size option:selected').data('price');
+        var price = $('.card-price i');
+        price.text(getPrice)
+    });
+
 
 
 });

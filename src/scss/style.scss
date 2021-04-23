@@ -1642,8 +1642,8 @@ footer {
         display: block;
         width: 100%;
         font-weight: normal;
-        font-size: 16px;
-        line-height: 19px;
+        font-size: 14px;
+        line-height: 14px;
         color: #22262A;
     }
     b {
@@ -1668,6 +1668,22 @@ footer {
             bottom: 0;
             margin: auto;
         }
+    }
+}
+
+.filter-name i {
+    margin-right: 10px;
+    display: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #22262A;
+    small {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #22262A;
     }
 }
 
