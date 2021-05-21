@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="card-price">
                                         <b><i>12 450</i> ₽</b>
-                                        <button class="btn-orange" type="submit">
+                                        <button class="btn-orange order-btn" type="button">
                                             <span>Заказать</span>
                                         </button>
                                     </div>
@@ -176,6 +176,34 @@
             </section>
 
         </main>
+
+        <div class="popup-wrap" id="popup-wrap-order">
+            <div class="popup" id="popup-order">
+                <a href="#" class="close-order-popup"></a>
+                <div class="title">Предварительный заказ на <span></span> размеры <i></i>. </div>
+                <form action="/" method="POST">
+                    <div class="popup-order-item">
+                        <label for="name-rew">Имя:</label>
+                        <input type="text" id="name-order">
+                    </div>
+                    <div class="popup-order-item">
+                        <label for="tel-product">Телефон:</label>
+                        <input type="tel" required id="tel-order">
+                    </div>
+                    <div class="popup-order-item">
+                        <label for="email-product">Email:</label>
+                        <input type="e-mail" required id="mail-order">
+                    </div>
+                    <div class="popup-order-item">
+                        <label for="message-order">Комментарий:</label>
+                        <textarea name="message-order" id="message-order"></textarea>
+                    </div>
+                    <button class="btn-orange" type="submit">Оформить</button>
+                </form>
+            </div>
+        </div>
+
+
 
         @@include('components/page/_3_footer.html')
     </div>

@@ -325,11 +325,38 @@
                     </div>
 
                     <a href="#" class="btn-orange">Смотреть все</a>
+                    <a href="javascript:void(0);" class="btn-orange btn-rew">Оставить отзыв</a>
 
                 </div>
             </section>
 
         </main>
+
+        <div class="popup-wrap" id="popup-wrap-rew">
+            <div class="popup" id="popup-rew">
+                <a href="#" class="close-rew-popup"></a>
+                <div class="title">Добавить отзыв о Гранитной мастерской "Базальт"</div>
+                <form action="/" method="POST">
+                    <div class="popup-rew-item">
+                        <label for="name-rew">Имя:</label>
+                        <input type="text" required id="name-rew">
+                    </div>
+                    <div class="popup-rew-item">
+                        <label for="tel-rew">Телефон:</label>
+                        <input type="tel" id="tel-rew">
+                    </div>
+                    <div class="popup-rew-item">
+                        <label for="email-rew">Email:</label>
+                        <input type="e-mail" required id="mail-rew">
+                    </div>
+                    <div class="popup-rew-item">
+                        <label for="message-rew">Текст отзыва:</label>
+                        <textarea name="message-rew" id="message-rew"></textarea>
+                    </div>
+                    <button class="btn-orange" type="submit">Оставить отзыв</button>
+                </form>
+            </div>
+        </div>
 
         @@include('components/page/_3_footer.html')
     </div>

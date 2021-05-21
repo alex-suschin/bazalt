@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('components/page/_1_head.html',{ 'title': 'Базальт', 'description': 'Описание', 'keywords': 'Ключевые слова', 'favicon': 'img/favicon/favicon.png' })
+
+<body>
+    <div class="wrapper vn vn-card" id="main">
+        @@include('components/page/_2_header.html')
+
+        <main>
+
+            <section class="content">
+                <div class="breadcrumbs-wrap">
+                    <div class="container">
+                        <ul class="breadcrumbs">
+                            <li><a href="#">Памятники</a></li>
+                            <li><a href="#">Гранитные памятники</a></li>
+                            <li>Горизонтальный памятник Г - 001</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container">
+                    <h1>Заголовок 1</h1>
+                    <h2>Заголовок 2</h2>
+                    <h3>Заголовок 3</h3>
+                    <p>Параграф</p>
+                    <a href="#">Cсылка</a>
+
+                    <ul>
+                        <li>Маркированный список 1</li>
+                        <li>Маркированный список 2</li>
+                        <li>Маркированный список 3</li>
+                        <li>Маркированный список 4</li>
+                    </ul>
+
+                    <ol>
+                        <li>Нумерованный список 1</li>
+                        <li>Нумерованный список 2</li>
+                        <li>Нумерованный список 3</li>
+                        <li>Нумерованный список 4</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="form-wrap">
+                <img src="img/cloud-form-left.png" class="decor-form-left" alt="">
+                <img src="img/cloud-form-right.png" class="decor-form-right" alt="">
+                <img src="img/angel2.png" class="decor-form-angel" alt="">
+                <div class="container">
+                    <div class="title">Закажите бесплатную консультацию</div>
+                    <form action="/" class="form-callback" method="POST">
+                        <div class="form-callback-item">
+                            <label for="input-name">Ваше имя</label>
+                            <input id="input-name" type="text" placeholder="Имя">
+                        </div>
+                        <div class="form-callback-item">
+                            <label for="input-name">Ваш телефон</label>
+                            <input id="input-name" type="tel" placeholder="Телефон">
+                        </div>
+                        <div class="form-callback-item">
+                            <label for="input-name">Ваш E-mail</label>
+                            <input id="input-name" type="e-mail" placeholder="E-mail">
+                        </div>
+                        <button class="btn-orange" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </section>
+
+            <section class="our-works">
+                <div class="container">
+                    <h2>Наши работы</h2>
+                    <div class="stage">
+                        <div class="works-photos">
+                            <div class="ring">
+                                <a href="img/rew-1.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-1.jpg);"></a>
+                                <a href="img/rew-2.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-2.jpg);"></a>
+                                <a href="img/rew-3.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-3.jpg);"></a>
+                                <a href="img/rew-4.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-4.jpg);"></a>
+                                <a href="img/rew-1.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-1.jpg);"></a>
+                                <a href="img/rew-2.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-2.jpg);"></a>
+                                <a href="img/rew-3.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-3.jpg);"></a>
+                                <a href="img/rew-4.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-4.jpg);"></a>
+                                <a href="img/rew-1.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-1.jpg);"></a>
+                                <div href="img/rew-2.jpg" class="img" data-fancybox="photos" style="background-image: url(img/rew-2.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-orange btn-more">Смотреть все</a>
+                </div>
+            </section>
+
+        </main>
+
+        <div class="popup-wrap" id="popup-wrap-order">
+            <div class="popup" id="popup-order">
+                <a href="#" class="close-order-popup"></a>
+                <div class="title">Предварительный заказ на <span></span> размеры <i></i>. </div>
+                <form action="/" method="POST">
+                    <div class="popup-order-item">
+                        <label for="name-rew">Имя:</label>
+                        <input type="text" id="name-order">
+                    </div>
+                    <div class="popup-order-item">
+                        <label for="tel-product">Телефон:</label>
+                        <input type="tel" required id="tel-order">
+                    </div>
+                    <div class="popup-order-item">
+                        <label for="email-product">Email:</label>
+                        <input type="e-mail" required id="mail-order">
+                    </div>
+                    <div class="popup-order-item">
+                        <label for="message-order">Комментарий:</label>
+                        <textarea name="message-order" id="message-order"></textarea>
+                    </div>
+                    <button class="btn-orange" type="submit">Оформить</button>
+                </form>
+            </div>
+        </div>
+
+
+
+        @@include('components/page/_3_footer.html')
+    </div>
+
+    @@include('components/page/_4_scripts.html')
+</body>
+
+</html>
